@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.85;
+    filter: brightness(0.6);
+}
+
+.head-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    margin: 30px 45px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    max-width: 90%;
+    z-index: 2;
+    position: relative;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    max-width: 75px;
+    height: auto;
+}
+
+#logo img {
+    min-width: 50px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.head-container ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.head-container ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    position: relative;
+    padding: 8px 0;
+    transition: color 0.3s ease;
+}
+
+.head-container ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #00d4ff;
+    transition: width 0.3s ease;
+}
+
+.head-container ul li a:hover {
+    color: #00d4ff;
+}
+
+.head-container ul li a:hover::after {
+    width: 100%;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.head-container {
+    animation: appear 0.5s ease-in-out forwards;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    width: 1000px;
+    height: 500px;
+    padding: 20px 20px;
+    margin: 100px 45px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    max-width: 90%;
+    z-index: 2;
+    position: absolute;
+}
+
+.main-container h1 {
+    font-size: 2.8rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.main-container p {
+    font-size: 1.2rem;
+    color: #eeeeee;
+    line-height: 1.8;
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.btn#start-btn {
+    width: 100px;
+    height: 50px;
+    border: none;
+    border-radius: 4px;
+    background-color: #00d4ff;
+    color: #000;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.btn#start-btn:hover {
+    background-color: #00aacc;
+}
+
+.btn#start-btn:active {
+    background: #0093b1;
+}
