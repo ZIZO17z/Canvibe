@@ -10,32 +10,108 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .scroll-section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.6s ease-out;
+        }
+        
+        .scroll-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .main-container.left {
+            align-items: flex-start;
+            text-align: left;
+        }
+        
+        .main-container.right {
+            align-items: flex-end;
+            text-align: right;
+        }
+        
+        .main-container h1,
+        .main-container p {
+            text-align: inherit;
+        }
+    </style>
 </head>
 
 <body>
+
     <video autoplay muted loop playsinline id="bg-video">
     <source src="original-d99071d642c8efd87400222a0c344e1a.mp4" type="video/mp4" />
-    Your browser does not support HTML5 video.
   </video>
+
     <div class="head-container">
-        <a href="index.html" id="logo">
+        <a href="#home" id="logo">
             <img src="images/c.png" alt="Canvibe Logo" />
         </a>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Developers</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Services</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#developers">Developers</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#services">Services</a></li>
         </ul>
     </div>
-    <div class="main-container">
-        <h1 style="bottom: 40px;
-        color: white;"> in <span style="color:#00d4ff; cursor:pointer;"> Canvibe </span> Collaborate . Create . Grow</h1>
-        <p>At <strong>Canvibe</strong>, we believe in the power of connection. Whether you're a developer, designer, or dreamer, this is your space to build, share, and innovate alongside passionate peers. Work doesn't have to feel like work—when it's fun,
-            it's magic.
-        </p>
-        <button class="btn" id="start-btn">Join</button>
-    </div>
+
+    <section id="home">
+        <div class="main-container scroll-section center">
+            <h1>in <span style="color:#00d4ff; cursor:pointer;">Canvibe</span> Collaborate . Create . Grow</h1>
+            <p>
+                At <strong>Canvibe</strong>, we believe in the power of connection. Whether you're a developer, designer, or dreamer, this is your space to build, share, and innovate.
+            </p>
+            <button class="btn" id="start-btn">Join</button>
+        </div>
+    </section>
+
+    <section id="developers">
+        <div class="developer-container scroll-section center">
+            <h1>Meet our <span style="color:#00d4ff;">Developer</span></h1>
+            <h2>
+                Ziad Emad Ahmed
+            </h2>
+            <div class="home-img">
+                <div class="img-box">
+                    <div class="img-item">
+                        <img src="images/home.png" alt="ziad is here">
+                    </div>
+                </div>
+    </section>
+
+    <section id="contact">
+        <div class="main-container scroll-section center">
+            <h1><span style="color:#00d4ff;">Contact</span> Us</h1>
+            <p>
+                Got an idea or just want to say hi? Reach out and let's build something together. We're always open for creative collaborations.
+            </p>
+            <button class="btn" id="start-btn">Message</button>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="main-container scroll-section center">
+            <h1>Our <span style="color:#00d4ff;">Services</span></h1>
+            <p>
+                From UI design to backend engineering, we provide full-stack services that turn concepts into digital experiences. Let’s make it real.
+            </p>
+            <button class="btn" id="start-btn">See More</button>
+        </div>
+    </section>
     <script src="scripts/script.js"></script>
 
 </body>
