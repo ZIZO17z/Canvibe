@@ -1,15 +1,15 @@
-const observer = new IntersectionObserver(
-    (entries) => {
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll(".scroll-section");
+
+    const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
+                entry.target.classList.add("visible");
             }
         });
     }, {
-        threshold: 0.3
-    }
-);
+        threshold: 0.15
+    });
 
-document.querySelectorAll('.scroll-section').forEach(section => {
-    observer.observe(section);
+    sections.forEach(section => observer.observe(section));
 });

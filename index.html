@@ -3,52 +3,13 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="author" content="Ziad Emad" />
+    <meta name="author" content="Ziad Emad Ahmed" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Canvibe</title>
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        section {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-        
-        .scroll-section {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 0.6s ease-out;
-        }
-        
-        .scroll-section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .main-container.left {
-            align-items: flex-start;
-            text-align: left;
-        }
-        
-        .main-container.right {
-            align-items: flex-end;
-            text-align: right;
-        }
-        
-        .main-container h1,
-        .main-container p {
-            text-align: inherit;
-        }
-    </style>
 </head>
 
 <body>
@@ -57,63 +18,66 @@
     <source src="original-d99071d642c8efd87400222a0c344e1a.mp4" type="video/mp4" />
   </video>
 
-    <div class="head-container">
+    <header class="head-container">
         <a href="#home" id="logo">
             <img src="images/c.png" alt="Canvibe Logo" />
         </a>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#developers">Developers</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#services">Services</a></li>
-        </ul>
-    </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#developers">Developers</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#services">Services</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <section id="home">
-        <div class="main-container scroll-section center">
-            <h1>in <span style="color:#00d4ff; cursor:pointer;">Canvibe</span> Collaborate . Create . Grow</h1>
-            <p>
-                At <strong>Canvibe</strong>, we believe in the power of connection. Whether you're a developer, designer, or dreamer, this is your space to build, share, and innovate.
-            </p>
-            <button class="btn" id="start-btn">Join</button>
-        </div>
-    </section>
+    <main>
+        <section id="home" class="scroll-section">
+            <div class="main-container center">
+                <h1>In <span class="highlight">Canvibe</span> — Collaborate. Create. Grow.</h1>
+                <p>
+                    At <strong>Canvibe</strong>, we believe in the power of connection. Whether you're a developer, designer, or dreamer, this is your space to build, share, and innovate.
+                </p>
+                <button class="btn">Join</button>
+            </div>
+        </section>
 
-    <section id="developers">
-        <div class="developer-container scroll-section center">
-            <h1>Meet our <span style="color:#00d4ff;">Developer</span></h1>
-            <h2>
-                Ziad Emad Ahmed
-            </h2>
-            <div class="home-img">
-                <div class="img-box">
-                    <div class="img-item">
-                        <img src="images/home.png" alt="ziad is here">
+        <section id="developers" class="scroll-section">
+            <div class="developer-container center">
+                <h1>Meet Our <span class="highlight">Developer</span></h1>
+                <h2>Ziad Emad Ahmed</h2>
+                <div class="home-img">
+                    <div class="img-box">
+                        <img src="images/home.png" alt="Ziad Emad Ahmed">
                     </div>
                 </div>
-    </section>
+            </div>
+        </section>
 
-    <section id="contact">
-        <div class="main-container scroll-section center">
-            <h1><span style="color:#00d4ff;">Contact</span> Us</h1>
-            <p>
-                Got an idea or just want to say hi? Reach out and let's build something together. We're always open for creative collaborations.
-            </p>
-            <button class="btn" id="start-btn">Message</button>
-        </div>
-    </section>
+        <section id="contact" class="scroll-section">
+            <div class="main-container center">
+                <h1><span class="highlight">Contact</span> Us</h1>
+                <p>
+                    If you find anything to improve don't be shy and contact me
+                </p>
+                <p>
+                    <span class="highlight">E-mail</span>: ziad.1024087@stemoctober.moe.edu.eg
+                </p>
+            </div>
+        </section>
 
-    <section id="services">
-        <div class="main-container scroll-section center">
-            <h1>Our <span style="color:#00d4ff;">Services</span></h1>
-            <p>
-                From UI design to backend engineering, we provide full-stack services that turn concepts into digital experiences. Let’s make it real.
-            </p>
-            <button class="btn" id="start-btn">See More</button>
-        </div>
-    </section>
+        <section id="services" class="scroll-section">
+            <div class="main-container center">
+                <h1>Our <span class="highlight">Services</span></h1>
+                <p>
+                    Our project is making you able to interact with your friends by making different canvas
+                </p>
+            </div>
+        </section>
+    </main>
+
     <script src="scripts/script.js"></script>
-
 </body>
 
 </html>
