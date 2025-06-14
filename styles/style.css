@@ -153,9 +153,6 @@ body {
     object-fit: cover;
 }
 
-
-/* Scroll Animation */
-
 .scroll-section {
     opacity: 0;
     transform: translateY(50px);
@@ -176,4 +173,9 @@ body {
         opacity: 1;
         transform: scale(1);
     }
+}
+
+.login-container {
+    margin: 0 15px;
+    text-align: center;
 }
